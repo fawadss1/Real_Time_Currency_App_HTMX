@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Currency Exchange</title>
+</head>
+<body>
+<div class="p-4 text-center bg-success text-light" style="border: yellow 2px solid;">
+    <h3 class="fw-bold">Warmly Welcome To Real Time Currency Exchange App</h3>
+</div>
+<script src="https://unpkg.com/htmx.org@1.8.4"></script>
+<div class="mt-5" id="cureny" hx-get="/data" hx-trigger="every 5s" hx-swap="innerhtml">
+    {% include 'Data.html' %}
+</div>
+<p class="fixed-bottom bg-dark text-warning text-center">&copy; 2022 All Rights Reserved, Developed by Fawad.</p>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
